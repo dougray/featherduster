@@ -9,7 +9,7 @@ prefix = 'A'*random.randint(1,4)
 # suffix = sys.argv[1]
 suffix = 'lol, u tk him 2 da bar|?duh'
 
-cipher = AES.new(key, AES.MODE_ECB, iv)
+cipher = AES.new(key, AES.MODE_ECB)
 
 def my_encryption_oracle(plaintext):
    return cipher.encrypt(ca.pkcs7_pad(prefix + plaintext + suffix, AES.block_size))

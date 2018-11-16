@@ -7,7 +7,7 @@ key = b'YELLOW SUBMARINE'
 iv = Random.new().read(AES.block_size)
 suffix = 'lol, u tk him 2 da bar|?duh'
 
-cipher = AES.new(key, AES.MODE_ECB, iv)
+cipher = AES.new(key, AES.MODE_ECB)
 
 def my_encryption_oracle(plaintext):
    return cipher.encrypt(ca.pkcs7_pad('A'*random.randint(1,AES.block_size) + plaintext + suffix, AES.block_size))

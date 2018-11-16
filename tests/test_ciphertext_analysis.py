@@ -38,9 +38,9 @@ iv = Random.new().read(AES.block_size)
 
 two_time_pad_key = Random.new().read(len(plaintext2))
 
-ecb_cipher = AES.new(key, AES.MODE_ECB, iv)
+ecb_cipher = AES.new(key, AES.MODE_ECB)
 ecb_ciphertexts = [ecb_cipher.encrypt(ca.pkcs7_pad(plaintext, AES.block_size))]
-ecb_cipher = AES.new(key, AES.MODE_ECB, iv)
+ecb_cipher = AES.new(key, AES.MODE_ECB)
 ecb_ciphertexts.append(ecb_cipher.encrypt(ca.pkcs7_pad(plaintext2,AES.block_size)))
 
 cbc_cipher = AES.new(key, AES.MODE_CBC, iv)
