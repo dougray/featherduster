@@ -72,6 +72,6 @@ There are a few rules for contributing:
 * The license on the code must be compatible with the BSD license used by FeatherDuster/Cryptanalib.
 * No additional dependencies may be introduced.
 * Code must be OS-independent.
-* Code must pass unit tests. Execute `python -c 'from tests import *'` in the `featherduster` directory to execute all unit tests.
+* Code must pass unit tests. Execute `python -c 'from tests import *' && sh tests/*.sh && echo 'Build passed.'` in the repo root directory to execute all unit tests. If you see `Build passed.` at the end, your code passes.
 
 
