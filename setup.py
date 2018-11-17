@@ -1,11 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(name='featherduster',
-      version='0.3',
+      version='0.4',
       description='An automated cryptanalysis tool',
-      url='http://github.com/nccgroup/featherduster',
+      url='http://github.com/unicornsasfuel/featherduster',
       author='Daniel "unicornfurnace" Crowley',
-      author_email='daniel.crowley@nccgroup.trust',
       license='BSD',
       #packages=['cryptanalib','feathermodules','featherduster'],
       packages=find_packages(exclude=['examples','tests']),
