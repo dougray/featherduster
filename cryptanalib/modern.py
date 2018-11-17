@@ -2,7 +2,7 @@
 Cryptanalib - A series of useful functions for cryptanalysis
 by Daniel "unicornFurnace" Crowley
 
-dependencies - PyCrypto
+dependencies - PyCryptodome
 '''
 
 from Crypto.Hash import *
@@ -357,7 +357,7 @@ def fermat_factor(N, minutes=10, verbose=False):
    Daniel J. Bernstein, Nadia Heninger, and Tanja Lange.
 
    http://facthacks.cr.yp.to/
-   
+
    N - integer to attempt to factor using Fermat's Last Theorem
    minutes - number of minutes to run the algorithm before giving up
    verbose - (bool) Periodically show how many iterations have been
@@ -1251,7 +1251,7 @@ def detect_hash_format(words, hashes):
                elif hash_len == 20:
                   if RIPEMD.new(candidate).digest() == inhash:
                      return (candidate,'ripemd-160')
-                  if SHA.new(candidate).digest() == inhash:
+                  if SHA1.new(candidate).digest() == inhash:
                      return (candidate,'sha-1')
                elif hash_len == 28:
                   if SHA224.new(candidate).digest() == inhash:
@@ -1310,8 +1310,8 @@ def dsa_repeated_nonce_attack(r,msg1,s1,msg2,s2,n,verbose=False):
    s1 = string_to_long(s1)
    s2 = string_to_long(s2)
    # convert messages to sha1 hash as number
-   z1 = string_to_long(SHA.new(msg1).digest())
-   z2 = string_to_long(SHA.new(msg2).digest())
+   z1 = string_to_long(SHA1.new(msg1).digest())
+   z2 = string_to_long(SHA1.new(msg2).digest())
    
    sdiff_inv = number.inverse(((s1-s2)%n),n)
    k = ( ((z1-z2)%n) * sdiff_inv) % n

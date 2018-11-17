@@ -10,7 +10,7 @@ setup(name='featherduster',
       #packages=['cryptanalib','feathermodules','featherduster'],
       packages=find_packages(exclude=['examples','tests']),
       install_requires=[
-          'pycrypto',
+          'pycryptodome',
           'ishell'
       ],
       entry_points = {
