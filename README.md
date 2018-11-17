@@ -1,6 +1,6 @@
 # FeatherDuster (and Cryptanalib)
 ![FeatherDuster logo ](fd_logo.png)
-[![Build Status](https://travis-ci.org/nccgroup/featherduster.svg?branch=master)](https://travis-ci.org/nccgroup/featherduster)
+[![Build Status](https://travis-ci.org/unicornsasfuel/featherduster.svg?branch=master)](https://travis-ci.org/unicornsasfuel/featherduster)
 
 FeatherDuster is a tool written primarily by Daniel "unicornfurnace" Crowley, along with community contributions, for breaking crypto; It tries to make the process of identifying and exploiting weak cryptosystems as easy as possible. Cryptanalib is the moving parts behind FeatherDuster, and can be used independently of FeatherDuster.
 
