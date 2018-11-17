@@ -2,7 +2,7 @@
 Cryptanalib - A series of useful functions for cryptanalysis
 by Daniel "unicornFurnace" Crowley
 
-dependencies - PyCrypto
+dependencies - PyCryptodome
 '''
 
 from Crypto.Util import number

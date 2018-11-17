@@ -18,14 +18,14 @@ Note: You likely want to install into a [python virtual environment](http://pyth
 #### Dependencies
 ~~~
 Python 2.x
-PyCrypto
+PyCryptodome
 ishell (which itself depends on readline and ncurses)
 ~~~
 
 ### Installation errors
 
 #### Missing GCC
-If you're having trouble installing PyCrypto on an Ubuntu variant, you may not have gcc installed. It's possible to install PyCrypto through apt with `apt-get install python-crypto`.
+If you're having trouble installing PyCryptodome on an Ubuntu variant, you may not have gcc installed. It's possible to install PyCrypto through apt with `apt-get install python-crypto`.
 
 #### Missing libncurses
 If you encounter an error such as:
